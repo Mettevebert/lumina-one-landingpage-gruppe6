@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="image/png" href="/img/LUMINA logo.png" sizes="16x16">
+    <link rel="favicon" type="image/png" href="/img/photos/LUMINA logo.png" sizes="16x16">
     <link rel="stylesheet" href="css/style.css">
     <title>LUMINA Audio</title>
 </head>
@@ -16,10 +16,10 @@
 <!-- navigation -->
             <nav class="navbar">
             <ul class="nav-links">
-                <li><a href="#hoejtalere">Højtalere</a></li>
-                <li><a href="#tilkoeb">Tilkøb</a></li>
-                <li><a href="#social">Social Connect</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
+                <li>Højtalere</li>
+                <li>Tilkøb</li>
+                <li>Social Connect</li>
+                <li>Kontakt</li>
             </ul>
             </nav>
     </header>
@@ -29,7 +29,7 @@
  <section class="hero">
         <div class="hero-bg">
             <!-- Replace with real lifestyle image -->
-            <img src="img/ChatGPT Image 17. feb. 2026, 11.10.34.png" alt="LUMINA One hoejtaler på strand i solnedgangen">
+            <img src="img/photos/hoejtaler-i-solnedgang.png" alt="LUMINA One hoejtaler på strand i solnedgangen">
         </div>
                 <div class="hero-text">
                 <p class="hero-eyebrow">Light Up Your Moments</p>
@@ -39,12 +39,98 @@
         </div>
     </section>
     
-    <!-- Trustpilot section -->
+    <!-- Trustpilot section 
+         <section>  = sektion med anmeldelser
+         <aside>    = badge-boksen (supplerende indhold ved siden af)
+         <article>  = hver enkelt anmeldelse (selvstændig enhed)
+         <footer>   inde i <article> = kilden/forfatteren til anmeldelsen-->
+
      <section class="trust-pilot-section" id="reviews">
         <div class="container">
+            < class="trustpilot-layout">
+                   <!-- Venstre: Stort Trustpilot badge -->
+                <aside class="trustpilot-badge" aria-label="Trustpilot bedømmelse">
+                    <div class="tp-logo">
+                        <svg class="tp-logo-star" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" fill="#00b67a"/>
+                        </svg>
+                        <span class="tp-logo-text">Trustpilot</span>
+                    </div>
+                    <p class="tp-label">Fremragende</p>
+                    <div class="tp-stars" aria-label="4.2 ud af 5 stjerner">
+                        <span class="tp-star"></span>
+                        <span class="tp-star"></span>
+                        <span class="tp-star"></span>
+                        <span class="tp-star"></span>
+                        <span class="tp-star tp-star--half"></span>
+                    </div>
+                    <p class="tp-count">4.2 ud af 5</p>
+                    <p class="tp-reviews">+1.800 anmeldelser</p>
+                </aside>
 
+         <!-- Højre: 2-kolonne reviews grid -->
+                <div class="reviews-grid">
+
+                    <article class="review-card">
+                        <div class="review-stars-sm" aria-label="5 stjerner">
+                            <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
+                        </div>
+                        <h4>Pæn OG praktisk</h4>
+                        <p>Elsker designet – den ser virkelig lækker ud og passer ind i mit hjem. Men vigtigst af alt er den super nem at tage med. Jeg bruger den både i køkkenet, på altanen og når vi er på weekendtur.</p>
+                        <footer class="reviewer">Emma W., Herning</footer>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-stars-sm" aria-label="5 stjerner">
+                            <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
+                        </div>
+                        <h4>God til hverdagsbrug</h4>
+                        <p>Den er virkelig let og nem at smide i tasken. Perfekt til picnic eller strandture. Lydkvaliteten er god til størrelsen – ikke som en kæmpe højtaler, men mere end rigeligt til hyggemusik.</p>
+                        <footer class="reviewer">Maria K., Randers</footer>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-stars-sm" aria-label="5 stjerner">
+                            <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
+                        </div>
+                        <h4>Perfekt på farten</h4>
+                        <p>Let og nem at have med i tasken. Spiller virkelig godt.</p>
+                        <footer class="reviewer">Marianne V., Kolding</footer>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-stars-sm" aria-label="5 stjerner">
+                            <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
+                        </div>
+                        <h4>Overraskede mig positivt</h4>
+                        <p>Købte den primært pga. størrelsen og designet, men blev faktisk mest imponeret over lyden. Den spiller klart og rent, selv når vi er flere samlet. Og så er den virkelig nem at tage med rundt i hjemmet.</p>
+                        <footer class="reviewer">Anne S., Roskilde</footer>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-stars-sm" aria-label="5 stjerner">
+                            <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
+                        </div>
+                        <h4>Min faste rejsemakker</h4>
+                        <p>Har haft den med på ferie, og den fylder næsten ingenting i kufferten. Batteriet holder længe, og den er nem at forbinde. Jeg er ikke teknisk anlagt, men den virker hver gang uden bøvl.</p>
+                        <footer class="reviewer">Louise T., Horsens</footer>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-stars-sm" aria-label="5 stjerner">
+                            <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
+                        </div>
+                        <h4>Min nye favorit</h4>
+                        <p>Fylder ingenting og batteriet holder overraskende længe.</p>
+                        <footer class="reviewer">Sophie N., Svendborg</footer>
+                    </article>
+
+                </div>
+            </div>
         </div>
-     </section>
+    </section>
+
+    
 
 
 <!-- Produkt kort -->
@@ -80,33 +166,69 @@
                             <button class="color-btn color-btn--lavender" title="Lavender Mist"></button>
                         </div>
                     </div>
+<button class="btn-primary btn-full">Læg i kurv</button> 
+<figure class="product-img-wrap">
+                    <img src="" alt="LUMINA One højtaler i Sage Green set forfra" class="product-img-main">
+                    <div class="carousel-dots" aria-hidden="true">
+                        <span class="dot dot--active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </figure>
 
-     </section>
+            </div>
+        </div>
+    </section>
 
+      <section class="lifestyle-full">
 
+        <!-- Fuld-bredde lifestyle -->
+        <img
+            src=""
+            alt="Gruppe af unge kvinder danser med LUMINA One"
+            class="lifestyle-full-img"
+        >
+
+        <div class="lifestyle-full-overlay" aria-hidden="true"></div>
+        <div class="lifestyle-full-text">
+            <h2>Lyd der forbinder os.</h2>
+            <p>Fordi sammen lyder bedre.</p>
+        </div>
+    </section>
+<!-- Sidste CTA -->
+<section class="cta-section">
+        <div class="container cta-inner">
+            <h2>Klar til at opleve LUMINA?</h2>
+            <p class="cta-price">1.499 kr.</p>
+            <p class="cta-sub">Gratis fragt | 30 dages fuld returret | 2 års garanti</p>
+            <button class="btn-primary">Bestil nu</button>
+        </div>
+    </section>
 
       <footer class="footer">
         <div class="container">
-            <!-- Trust icons -->
+     <!-- Trust icons -->
             <div class="footer-trust">
                 <h3>Hvorfor vælge LUMINA?</h3>
                 <div class="trust-icons">
-                    <div class="trust-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                    <ul class="trust-item">
+                        <li class="trust-item">
+                        <img src="img/footer-icons/levering.png" alt="leveringspakke" class="trust-icon-img">
                         <span>Gratis & CO2 kompenseret fragt</span>
-                    </div>
-                    <div class="trust-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 14 4 9 9 4"/><path d="M20 20v-7a4 4 0 0 0-4-4H4"/></svg>
+                        </li>
+                    </ul>
+                    <li class="trust-item">
+                        <img src="img/footer-icons/returnering.png" alt="returnering" class="trust-icon-img">
                         <span>Hurtig & let returnering</span>
-                    </div>
-                    <div class="trust-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                    </li>
+                    <li class="trust-item">
+                        <img src="img/footer-icons/nem betaling.png" alt="betalingsmuligheder" class="trust-icon-img">
                         <span>Fleksibel betalingsmulighed</span>
-                    </div>
-                    <div class="trust-item">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </li>
+                    <li class="trust-item">
+                        <img src="img/footer-icons/kundeservice.png" alt="eksperter i lyd" class="trust-icon-img">
                         <span>Tal med vores lydeksperter</span>
-                    </div>
+                    </li>
                 </div>
             </div>
 
