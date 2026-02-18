@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="icon" type="image/png" href="/img/photos/LUMINA-logo.png" sizes="16x16">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/photos/LUMINA-logo.png" sizes="16x16">
     <link rel="stylesheet" href="css/style.css">
     <title>LUMINA Audio</title>
 </head>
 <body>
     <header>
     <!-- brand name -->
-        <a href="#" class="brand">LUMINA One</a>
+        <a>LUMINA One</a>
     
 <!-- navigation -->
             <nav class="navbar">
@@ -32,8 +34,8 @@
             <img src="img/photos/hoejtaler-i-solnedgang.png" alt="LUMINA One hoejtaler på strand i solnedgangen">
         </div>
                 <div class="hero-text">
+                <h1>Mød den nye<br><span class="lumina-text">LUMINA One</span></h1>
                 <p class="hero-eyebrow">Light Up Your Moments</p>
-                <h1>Mød den nye<br>LUMINA One</h1>
                 <p class="hero-sub">100 dB lyd. 18 timers batteri. Designet til at blive set.</p>
             </div>
     </section>
@@ -46,6 +48,7 @@
 
      <section class="trustpilot-section" id="reviews">
         <div class="container">
+        <h2 class="visually-hidden">Kundeanmeldelser</h2>
             <div class="trustpilot-layout">
                    <!-- Venstre: Stort Trustpilot badge -->
                 <aside class="trustpilot-badge" aria-label="Trustpilot bedømmelse">
@@ -55,8 +58,8 @@
                         </svg>
                         <span class="tp-logo-text">Trustpilot</span>
                     </div>
-                    <p class="tp-label">Fremragende</p>
-                    <div class="tp-stars" aria-label="4.2 ud af 5 stjerner">
+                    <h2 class="tp-label">Fremragende</h2>
+                    <div class="tp-stars" role="img" aria-label="4.2 ud af 5 stjerner">
                         <span class="tp-star"></span>
                         <span class="tp-star"></span>
                         <span class="tp-star"></span>
@@ -71,16 +74,16 @@
                 <div class="reviews-grid">
 
                     <article class="review-card">
-                        <div class="review-stars-sm" aria-label="5 stjerner">
+                        <div class="review-stars-sm" role="img" aria-label="5 stjerner">
                             <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
                         </div>
-                        <h4>Pæn OG praktisk</h4>
+                        <h3>Pæn OG praktisk</h3>
                         <p>Elsker designet – den ser virkelig lækker ud og passer ind i mit hjem. Men vigtigst af alt er den super nem at tage med. Jeg bruger den både i køkkenet, på altanen og når vi er på weekendtur.</p>
                         <footer class="reviewer">Emma W., Herning</footer>
                     </article>
 
                     <article class="review-card">
-                        <div class="review-stars-sm" aria-label="5 stjerner">
+                        <div class="review-stars-sm" role="img" aria-label="5 stjerner">
                             <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
                         </div>
                         <h4>God til hverdagsbrug</h4>
@@ -89,7 +92,7 @@
                     </article>
 
                     <article class="review-card">
-                        <div class="review-stars-sm" aria-label="5 stjerner">
+                        <div class="review-stars-sm" role="img" aria-label="5 stjerner">
                             <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
                         </div>
                         <h4>Perfekt på farten</h4>
@@ -98,7 +101,7 @@
                     </article>
 
                     <article class="review-card">
-                        <div class="review-stars-sm" aria-label="5 stjerner">
+                        <div class="review-stars-sm" role="img" aria-label="5 stjerner">
                             <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
                         </div>
                         <h4>Overraskede mig positivt</h4>
@@ -107,7 +110,7 @@
                     </article>
 
                     <article class="review-card">
-                        <div class="review-stars-sm" aria-label="5 stjerner">
+                        <div class="review-stars-sm" role="img" aria-label="5 stjerner">
                             <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
                         </div>
                         <h4>Min faste rejsemakker</h4>
@@ -116,7 +119,7 @@
                     </article>
 
                     <article class="review-card">
-                        <div class="review-stars-sm" aria-label="5 stjerner">
+                        <div class="review-stars-sm" role="img" aria-label="5 stjerner">
                             <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
                         </div>
                         <h4>Min nye favorit</h4>
@@ -135,6 +138,11 @@
             <div class="features-layout">
 
                 <div class="features-images">
+                     <!-- BILLEDE 5: Bred (nederste) -->
+                    <img
+                        src="img/photos/kvinder-fest-hoejtaler.png"
+                        alt="Veninder hygger sig med musik fra LUMINA One"
+                        class="feat-img feat-img--sm2">
 
                     <!-- BILLEDE 3: Stor lifestyle (venstre/øverste) -->
                     <img
@@ -148,13 +156,6 @@
                         src="img/photos/yoga-kvinde-solnedgang.png"
                         alt="LUMINA One foran kvinde, som dyrker yoga"
                         class="feat-img feat-img--sm1"
-                    >
-
-                    <!-- BILLEDE 5: Bred (nederste) -->
-                    <img
-                        src="img/photos/kvinder-fest-hoejtaler.png"
-                        alt="Veninder hygger sig med musik fra LUMINA One"
-                        class="feat-img feat-img--sm2"
                     >
 
                     <div class="carousel-dots" aria-hidden="true">
@@ -232,142 +233,148 @@
 
 <!-- Produkt kort -->
      <section class="product-section" id="hoejtalere">
-
-        <div class="container">
-            <div class="product-layout">
-    <!-- venstre side -->
-                <div class="product-info">
-                    <h2>Skabt til at blive hørt</h2>
-                    <p>LUMINA One er let, bærbar og kraftfuld. Vandafvisende design og fyldig lyd - klar til at tage med overalt.</p>
-
-            <div class="product-price">1.499 kr</div>
-
-        </div>
-
-        <div class="produkt-valg">
-            <label>Valgte</label>
-            <select>
-                <option>Sage Green</option>
-                <option>Dusty Rose</option>
-                <option>Lavender Mist</option>
-                <option>Moonlight</option>
-            </select>
-        </div>
-
-        <div class="color-picker">
-                        <p class="color-label">Sage Green</p>
-                        <div class="color-options">
-                            <button class="color-btn color-btn--sage color-btn--active" title="Sage Green"></button>
-                            <button class="color-btn color-btn--moonlight" title="Moonlight White"></button>
-                            <button class="color-btn color-btn--rose" title="Dusty Rose"></button>
-                            <button class="color-btn color-btn--lavender" title="Lavender Mist"></button>
-                        </div>
+    <div class="container">
+        <div class="product-layout">
+            
+            <!-- VENSTRE: Alt tekst og knapper -->
+            <div class="product-info">
+                <h2>Skabt til at blive hørt</h2>
+                <p><span class="lumina-text">LUMINA One</span> er let, bærbar og kraftfuld. Vandafvisende design og fyldig lyd - klar til at tage med overalt.</p>
+                
+                <div class="product-price">1.499 kr</div>
+                
+                <div class="produkt-valg">
+                    <label>Valgte</label>
+                    <select>
+                        <option>Sage Green</option>
+                        <option>Dusty Rose</option>
+                        <option>Lavender Mist</option>
+                        <option>Moonlight</option>
+                    </select>
+                </div>
+                
+                <div class="color-picker">
+                    <p class="color-label">Sage Green</p>
+                    <div class="color-options">
+                        <button class="color-btn color-btn--sage color-btn--active" title="Sage Green"></button>
+                        <button class="color-btn color-btn--moonlight" title="Moonlight White"></button>
+                        <button class="color-btn color-btn--rose" title="Dusty Rose"></button>
+                        <button class="color-btn color-btn--lavender" title="Lavender Mist"></button>
                     </div>
-<button class="btn-primary btn-full">Læg i kurv</button> 
-<figure class="product-img-wrap">
-                    <img src="img/photos/Sage green højtaler.png" alt="LUMINA One højtaler i Sage Green set forfra" class="product-img-main">
-                    <div class="carousel-dots" aria-hidden="true">
-                        <span class="dot dot--active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-                </figure>
-
+                </div>
+                
+                <button class="btn-primary btn-full">Læg i kurv</button>
             </div>
+            
+            <!-- HØJRE: KUN billedet -->
+            <figure class="product-img-wrap">
+                <img src="img/photos/sage-green-hoejtaler.png" alt="LUMINA One højtaler i Sage Green set forfra" class="product-img-main">
+                <div class="carousel-dots" aria-hidden="true">
+                    <span class="dot dot--active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </figure>
+            
         </div>
-    </section>
+    </div>
+</section>
 
-      <section class="lifestyle-full">
+<!-- Lifestyle Fullwidth -->
+<section class="lifestyle-full">
+    <!-- Fuld-bredde lifestyle billede -->
+    <img src="img/photos/Fest-billede.png" alt="Gruppe af unge kvinder danser med LUMINA One" class="lifestyle-full-img">
+    
+    <div class="lifestyle-full-overlay" aria-hidden="true"></div>
+    <div class="lifestyle-full-text">
+        <h3>Lyd der forbinder os.</h3>
+        <p>Fordi sammen lyder bedre.</p>
+    </div>
+</section>
 
-        <!-- Fuld-bredde lifestyle -->
-        <img src="img/photos/Fest billede.png" alt="Gruppe af unge kvinder danser med LUMINA One" class="lifestyle-full-img">
-
-        <div class="lifestyle-full-overlay" aria-hidden="true"></div>
-        <div class="lifestyle-full-text">
-            <h2>Lyd der forbinder os.</h2>
-            <p>Fordi sammen lyder bedre.</p>
-        </div>
-    </section>
 <!-- Sidste CTA -->
 <section class="cta-section">
-        <div class="container cta-inner">
-            <h2>Klar til at opleve LUMINA?</h2>
-            <p class="cta-price">1.499 kr.</p>
-            <p class="cta-sub">Gratis fragt | 30 dages fuld returret | 2 års garanti</p>
-            <button class="btn-primary">Bestil nu</button>
+    <div class="container cta-inner">
+        <h3>Klar til at opleve <span class="lumina-text">LUMINA</span>?</h3>
+        <p class="cta-price">1.499 kr.</p>
+        <p class="cta-sub">Gratis fragt | 30 dages fuld returret | 2 års garanti</p>
+        <button class="btn-primary">Bestil nu</button>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        
+        <!-- Trust icons -->
+        <div class="footer-trust">
+            <h3>Hvorfor vælge <span class="lumina-text">LUMINA</span>?</h3>
+            <ul class="trust-icon">
+                <li class="trust-item">
+                    <img src="img/footer-icons/levering.png" alt="leveringspakke" class="trust-icon-img">
+                    <span>Gratis & CO2 kompenseret fragt</span>
+                </li>
+                <li class="trust-item">
+                    <img src="img/footer-icons/returnering.png" alt="returnering" class="trust-icon-img">
+                    <span>Hurtig & let returnering</span>
+                </li>
+                <li class="trust-item">
+                    <img src="img/footer-icons/nem-betaling.png" alt="betalingsmuligheder" class="trust-icon-img">
+                    <span>Fleksibel betalingsmulighed</span>
+                </li>
+                <li class="trust-item">
+                    <img src="img/footer-icons/kundeservice.png" alt="eksperter i lyd" class="trust-icon-img">
+                    <span>Tal med vores lydeksperter</span>
+                </li>
+            </ul>
         </div>
-    </section>
 
-      <footer class="footer">
-        <div class="container">
-     <!-- Trust icons -->
-            <div class="footer-trust">
-                <h3>Hvorfor vælge LUMINA?</h3>
-                    <ul class="trust-icon">
-                        <li class="trust-item">
-                        <img src="img/footer-icons/levering.png" alt="leveringspakke" class="trust-icon-img">
-                        <span>Gratis & CO2 kompenseret fragt</span>
-                        </li>
-                    
-                    <li class="trust-item">
-                        <img src="img/footer-icons/returnering.png" alt="returnering" class="trust-icon-img">
-                        <span>Hurtig & let returnering</span>
-                    </li>
-                    <li class="trust-item">
-                        <img src="img/footer-icons/nem betaling.png" alt="betalingsmuligheder" class="trust-icon-img">
-                        <span>Fleksibel betalingsmulighed</span>
-                    </li>
-                    <li class="trust-item">
-                        <img src="img/footer-icons/kundeservice.png" alt="eksperter i lyd" class="trust-icon-img">
-                        <span>Tal med vores lydeksperter</span>
-                    </li>
-                    </ul>
-                </div>
-            </div>
+        <!-- Footer kolonner - DIREKTE I CONTAINER -->
+        <div class="footer-col">
+            <h4>Specielle tilbud</h4>
+            <ul>
+                <li>Final Sale</li>
+                <li>Genbrugs kollektion</li>
+                <li>Opgradér din LUMINA</li>
+            </ul>
+        </div>
+        
+        <div class="footer-col">
+            <h4>Hjælp</h4>
+            <ul>
+                <li>Spor din ordre</li>
+                <li>Fragtinformation</li>
+                <li>Returnering</li>
+                <li>Kundeservice</li>
+                <li>Handelsbetingelser</li>
+            </ul>
+        </div>
+        
+        <div class="footer-col">
+            <h4>Om <span class="lumina-text">LUMINA</span></h4>
+            <ul>
+                <li>Vores virksomhed</li>
+                <li>Nyheder</li>
+                <li>Presse & Medier</li>
+                <li>Karriere</li>
+                <li>Sustainability & Impact</li>
+                <li>Vores historie</li>
+            </ul>
+        </div>
+        
+        <div class="footer-col">
+            <h4>Kategorier</h4>
+            <ul>
+                <li>Høretelefoner</li>
+                <li>Højtalere</li>
+                <li>Trådløse højtalere</li>
+                <li>Soundbars</li>
+                <li>Udendørs højtalere</li>
+                <li>Accessories</li>
+            </ul>
+        </div>
+        
+    </div>
+</footer>
 
-            <!-- Footer -->
-            <div class="footer-links">
-                <div class="footer-col">
-                    <h4>Specielle tilbud</h4>
-                    <ul>
-                        <li>Final Sale</li>
-                        <li>Genbrugs kollektion</li>
-                        <li>Opgradér din LUMINA</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Hjælp</h4>
-                    <ul>
-                        <li>Spor din ordre</li>
-                        <li>Fragtinformation</li>
-                        <li>Returnering</li>
-                        <li>Kundeservice</li>
-                        <li>Handelsbetingelser</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Om LUMINA</h4>
-                    <ul>
-                        <li>Vores virksomhed</li>
-                        <li>Nyheder</li>
-                        <li>Presse & Medier</li>
-                        <li>Karriere</li>
-                        <li>Sustainability & Impact</li>
-                        <li>Vores historie</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Kategorier</h4>
-                    <ul>
-                        <li>Høretelefoner</li>
-                        <li>Højtalere</li>
-                        <li>Trådløse højtalere</li>
-                        <li>Soundbars</li>
-                        <li>Udendørs højtalere</li>
-                        <li>Accessories</li>
-                    </ul>
-                </div>
-            </div>
-            </footer>
 </body>
 </html>
