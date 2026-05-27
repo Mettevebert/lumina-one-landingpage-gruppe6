@@ -1,145 +1,124 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Julius+Sans+One&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/ikoner/lumina-logo.png" sizes="16x16">
     <link rel="stylesheet" href="css/style.css">
     <title>LUMINA Audio</title>
 </head>
 <body>
-    <header>
-    <a class="brand">LUMINA</a>
-    <nav class="navbar">
+    <!-- TOP BAR -->
+<aside class="top-bar">
+    <a href="#reviews" class="top-bar-tp">
+        <span class="tp-mini-stars">
+            <span class="tp-mini-star"></span>
+            <span class="tp-mini-star"></span>
+            <span class="tp-mini-star"></span>
+            <span class="tp-mini-star"></span>
+            <span class="tp-mini-star tp-mini-star--half"></span>
+        </span>
+        <span>4.5 stjerner på Trustpilot</span>
+    </a>
+    <a href="#" class="top-bar-emærket">
+        <img src="img/ikoner/e-maerket.png" alt="E-mærket" width="24" height="24">
+        <span>E-mærket</span>
+    </a>
+</aside>
+
+<!-- HEADER -->
+<header>
+    <a href="#" class="brand-logo">
+        <img src="img/ikoner/lumina-logo.png" alt="LUMINA logo" width="36" height="36">
+        <span class="brand">Lumina</span>
+    </a>
+
+    <nav class="navbar" aria-label="Primær navigation">
         <ul class="nav-links">
-            <li>Højtalere</li>
-            <li>Tilkøb</li>
-            <li>Social Connect</li>
-            <li>Kontakt</li>
+            <li><a href="#hoejtalere">Højtalere</a></li>
+            <li><a href="hoeretelefoner">Høretelefoner</a></li>
+            <li><a href="kontakt">Kontakt</a></li>
         </ul>
     </nav>
-    <div class="header-actions">
-        <button class="icon-btn" aria-label="Søg">
-            <img src="img/ikoner/soeg.png" alt="" aria-hidden="true" width="22" height="22">
-        </button>
-        <button class="icon-btn" aria-label="Profil">
-            <img src="img/ikoner/profil.png" alt="" aria-hidden="true" width="22" height="22">
-        </button>
-        <button class="icon-btn" aria-label="Kurv">
-            <img src="img/ikoner/kurv.png" alt="" aria-hidden="true" width="22" height="22">
-        </button>
-    </div>
+
+    <menu class="header-actions">
+        <li>
+            <button class="icon-btn" aria-label="Søg">
+                <img src="img/ikoner/soeg.png" alt="" aria-hidden="true" width="22" height="22">
+            </button>
+        </li>
+        <li>
+            <button class="icon-btn" aria-label="Profil">
+                <img src="img/ikoner/profil.png" alt="" aria-hidden="true" width="22" height="22">
+            </button>
+        </li>
+        <li>
+            <button class="icon-btn" aria-label="Kurv">
+                <img src="img/ikoner/kurv.png" alt="" aria-hidden="true" width="22" height="22">
+            </button>
+        </li>
+    </menu>
 </header>
+<!-- ============================================================
+     HERO — her skal der være split layout: tekst venstre, billede højre
+     ============================================================ -->
+<section class="hero">
+    <article class="container hero-inner">
+ 
+        <hgroup class="hero-text">
+            <p class="hero-eyebrow">Oplev den nye</p>
+            <h1>Kraftfuld lyd.<br>Blødt design.</h1>
+            <p class="hero-sub">En bærbar højtaler skabt til musik, fællesskab og øjeblikke, der skal huskes.</p>
+            <a class="btn-primary">Oplev LUMINA ONE</a>
+        </hgroup>
+ 
+        <figure class="hero-img-wrap">
+            <img src="img/hoejtaler-billeder-detaljer/hvid-fra-siden.png" alt="LUMINA One højtaler i Moonlight">
+        </figure>
+ 
+    </article>
+</section>
+  
+<aside class="social-feed-section" aria-label="Instagram opslag">
+    <ul class="social-feed-grid">
+        <li class="feed-item">
+            <figure>
+                <img src="img/instagram-opslag/picnic.png" alt="LUMINA One til picnic">
+                <figcaption class="feed-overlay" aria-hidden="true">
+                    <img src="img/ikoner/ig.png" alt="" width="28" height="28">
+                </figcaption>
+            </figure>
+        </li>
+        <li class="feed-item">
+            <figure>
+                <img src="img/instagram-opslag/pool-party.png" alt="LUMINA One ved pool">
+                <figcaption class="feed-overlay" aria-hidden="true">
+                    <img src="img/ikoner/ig.png" alt="" width="28" height="28">
+                </figcaption>
+            </figure>
+        </li>
+        <li class="feed-item">
+            <figure>
+                <img src="img/instagram-opslag/yoga.png" alt="Yoga med LUMINA One">
+                <figcaption class="feed-overlay" aria-hidden="true">
+                    <img src="img/ikoner/ig.png" alt="" width="28" height="28">
+                </figcaption>
+            </figure>
+        </li>
+        <li class="feed-item">
+            <figure>
+                <img src="img/instagram-opslag/nyhavn.png" alt="LUMINA One i Nyhavn">
+                <figcaption class="feed-overlay" aria-hidden="true">
+                    <img src="img/ikoner/ig.png" alt="" width="28" height="28">
+                </figcaption>
+            </figure>
+        </li>
+    </ul>
+</aside>
 
-<!-- Hero Section -->
-
- <section class="hero">
-        <div class="hero-bg">
-            <!-- Replace with real lifestyle image -->
-            <img src="img/photos/hoejtaler-i-solnedgang.png" alt="LUMINA One hoejtaler på strand i solnedgangen">
-        </div>
-                <div class="hero-text">
-                <h1>Mød den nye<br><span class="lumina-text">LUMINA One</span></h1>
-                <p class="hero-eyebrow">Light Up Your Moments</p>
-                <p class="hero-sub">100 dB lyd. 18 timers batteri. Designet til at blive set.</p>
-            </div>
-    </section>
-    
-    <!-- Trustpilot section 
-         <section>  = sektion med anmeldelser
-         <aside>    = badge-boksen (supplerende indhold ved siden af)
-         <article>  = hver enkelt anmeldelse (selvstændig enhed)
-         <footer>   inde i <article> = kilden/forfatteren til anmeldelsen-->
-
-     <section class="trustpilot-section" id="reviews">
-        <div class="container">
-        <h2 class="visually-hidden">Kundeanmeldelser</h2>
-            <div class="trustpilot-layout">
-                   <!-- Venstre: Stort Trustpilot badge -->
-                <aside class="trustpilot-badge" aria-label="Trustpilot bedømmelse">
-                    <div class="tp-logo">
-                        <svg class="tp-logo-star" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" fill="#00b67a"/>
-                        </svg>
-                        <span class="tp-logo-text">Trustpilot</span>
-                    </div>
-                    <h2 class="tp-label">Fremragende</h2>
-                    <div class="tp-stars" role="img" aria-label="4.2 ud af 5 stjerner">
-                        <span class="tp-star"></span>
-                        <span class="tp-star"></span>
-                        <span class="tp-star"></span>
-                        <span class="tp-star"></span>
-                        <span class="tp-star tp-star--half"></span>
-                    </div>
-                    <p class="tp-count">4.2 ud af 5</p>
-                    <p class="tp-reviews">+1.800 anmeldelser</p>
-                </aside>
-
-         <!-- Højre: 2-kolonne reviews grid -->
-                <div class="reviews-grid">
-
-                    <article class="review-card">
-                        <div class="review-stars-sm" role="img" aria-label="5 stjerner">
-                            <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
-                        </div>
-                        <h3>Pæn OG praktisk</h3>
-                        <p>Elsker designet – den ser virkelig lækker ud og passer ind i mit hjem. Men vigtigst af alt er den super nem at tage med. Jeg bruger den både i køkkenet, på altanen og når vi er på weekendtur.</p>
-                        <footer class="reviewer">Emma W., Herning</footer>
-                    </article>
-
-                    <article class="review-card">
-                        <div class="review-stars-sm" role="img" aria-label="5 stjerner">
-                            <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
-                        </div>
-                        <h4>God til hverdagsbrug</h4>
-                        <p>Den er virkelig let og nem at smide i tasken. Perfekt til picnic eller strandture. Lydkvaliteten er god til størrelsen – ikke som en kæmpe højtaler, men mere end rigeligt til hyggemusik.</p>
-                        <footer class="reviewer">Maria K., Randers</footer>
-                    </article>
-
-                    <article class="review-card">
-                        <div class="review-stars-sm" role="img" aria-label="5 stjerner">
-                            <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
-                        </div>
-                        <h4>Perfekt på farten</h4>
-                        <p>Let og nem at have med i tasken. Spiller virkelig godt.</p>
-                        <footer class="reviewer">Marianne V., Kolding</footer>
-                    </article>
-
-                    <article class="review-card">
-                        <div class="review-stars-sm" role="img" aria-label="5 stjerner">
-                            <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
-                        </div>
-                        <h4>Overraskede mig positivt</h4>
-                        <p>Købte den primært pga. størrelsen og designet, men blev faktisk mest imponeret over lyden. Den spiller klart og rent, selv når vi er flere samlet. Og så er den virkelig nem at tage med rundt i hjemmet.</p>
-                        <footer class="reviewer">Anne S., Roskilde</footer>
-                    </article>
-
-                    <article class="review-card">
-                        <div class="review-stars-sm" role="img" aria-label="5 stjerner">
-                            <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
-                        </div>
-                        <h4>Min faste rejsemakker</h4>
-                        <p>Har haft den med på ferie, og den fylder næsten ingenting i kufferten. Batteriet holder længe, og den er nem at forbinde. Jeg er ikke teknisk anlagt, men den virker hver gang uden bøvl.</p>
-                        <footer class="reviewer">Louise T., Horsens</footer>
-                    </article>
-
-                    <article class="review-card">
-                        <div class="review-stars-sm" role="img" aria-label="5 stjerner">
-                            <span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span><span class="sm-star"></span>
-                        </div>
-                        <h4>Min nye favorit</h4>
-                        <p>Fylder ingenting og batteriet holder overraskende længe.</p>
-                        <footer class="reviewer">Sophie N., Svendborg</footer>
-                    </article>
-
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Features section - så godt vi nu kan -->
       <section class="features-section">
@@ -385,5 +364,6 @@
     </div>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
