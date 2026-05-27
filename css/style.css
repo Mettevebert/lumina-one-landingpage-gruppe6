@@ -225,9 +225,6 @@ hgroup.hero-text .btn-primary {
 /* ============================================================
    HERO
    ============================================================ */
-/* ============================================================
-   HERO
-   ============================================================ */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -295,6 +292,85 @@ figure.hero-img-wrap img {
     .hero h1 { font-size: 2.4rem; }
 }
 
+/* ============================================================
+   SOCIAL FEED — horisontal scroll
+   ============================================================ */
+aside.social-feed-section {
+    overflow: hidden;
+}
+
+ul.social-feed-grid {
+    display: flex;
+    gap: 16px;
+    padding: 0 40px;
+    margin: 0;
+    list-style: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    /* Skjul scrollbar men behold funktionen */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+ul.social-feed-grid::-webkit-scrollbar {
+    display: none;
+}
+
+li.feed-item {
+    flex: 0 0 360px; /* fast bredde så de stikker ud */
+    scroll-snap-align: start;
+}
+
+li.feed-item figure {
+    height: 800px;
+    aspect-ratio: unset;
+}
+
+li.feed-item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+li.feed-item:hover figure img {
+    transform: scale(1.05);
+}
+
+figcaption.feed-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(40, 32, 28, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    border-radius: 16px;
+}
+
+li.feed-item:hover figcaption.feed-overlay {
+    background: rgba(40, 32, 28, 0.35);
+}
+
+figcaption.feed-overlay img {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+li.feed-item:hover figcaption.feed-overlay img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    li.feed-item {
+        flex: 0 0 240px;
+    }
+}
 
 /* ============================================================
    TRUSTPILOT
