@@ -44,3 +44,25 @@ function initCarousel() {
 }
 
 initCarousel();
+
+// ── Farvevalg ───────────────────────────────────────────────
+let activeColor = 'groen';
+
+function selectColor(btn, colorName, colorPrefix) {
+    document.querySelectorAll('.color-btn').forEach(b =>
+        b.classList.remove('color-btn--active')
+    );
+    btn.classList.add('color-btn--active');
+    document.getElementById('color-name-label').textContent = colorName;
+    activeColor = colorPrefix;
+    swapMainImage('img/hoejtaler-billeder-detaljer/' + colorPrefix + '-uden-baggrund.png');
+}
+
+function swapMainImage(newSrc) {
+    const img = document.getElementById('product-main-img');
+    img.style.opacity = '0';
+    setTimeout(() => {
+        img.src = newSrc;
+        img.style.opacity = '1';
+    }, 220);
+}

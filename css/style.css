@@ -1,4 +1,140 @@
 /* ============================================================
+   LUMINA One — style.css (renset)
+   ============================================================ */
+
+/* ── FARVER ── */
+:root {
+    --cream:        #F9F6F3;
+    --charcoal:     #403B37;
+    --warm-white:   #FFF7ED;
+    --sage:         #DDEBC9;
+    --dusty-rose:   #d4a5a5;
+    --lavender:     #c8b8d4;
+    --moonlight:    #e9ecef;
+    --trustpilot:   #00b67a;
+}
+
+/* ── RESET ── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ── TYPOGRAFI — Poppins ── */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    background: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.7;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.2;
+}
+
+h1 { font-size: 3.8rem; }
+h2 { font-size: 2.4rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.2rem; }
+
+.lumina-text {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul, menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ── CONTAINER ── */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ── KNAPPER ── */
+.btn-primary {
+    display: inline-block;
+    background: var(--sage);
+    color: var(--charcoal);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 16px 44px;
+    border: 2px solid var(--sage);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.28s ease,
+                color 0.28s ease,
+                transform 0.18s ease,
+                box-shadow 0.28s ease;
+}
+
+.btn-primary:hover {
+    background: transparent;
+    color: var(--charcoal);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(64,59,59,0.18);
+}
+
+/* Læg i kurv — lyserød override */
+article.product-info .btn-primary {
+    background: #FEDFDF;
+    border-color: #FEDFDF;
+    color: var(--charcoal);
+}
+
+article.product-info .btn-primary:hover {
+    background: transparent;
+    border-color: #FEDFDF;
+    color: var(--charcoal);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.btn-full {
+    width: 100%;
+    text-align: center;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+
+/* ============================================================
    TOP BAR
    ============================================================ */
 aside.top-bar {
@@ -50,12 +186,13 @@ aside.top-bar {
     text-decoration: none;
 }
 
+
 /* ============================================================
    HEADER
    ============================================================ */
 header {
     position: fixed;
-    top: 60px; /* fixes med js i stedet for, så er den også tilpasset individuelle skærme */
+    top: 0; /* styres af JS */
     width: 100%;
     background: var(--warm-white);
     backdrop-filter: blur(10px);
@@ -85,9 +222,6 @@ header {
 .nav-links {
     display: flex;
     gap: 35px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .nav-links a {
@@ -101,9 +235,6 @@ menu.header-actions {
     display: flex;
     gap: 16px;
     align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .icon-btn {
@@ -115,112 +246,6 @@ menu.header-actions {
     align-items: center;
 }
 
-.hero {
-    padding-top: 0px; /* fixes med js i stedet for, så er den også tilpasset individuelle skærme */ 
-}
-
-/* ── FARVER ── */
-:root {
-    --cream:        #F9F6F3;
-    --chocolate:     #403B37;
-    --warm-white:   #FFF7ED;
-    --sage:         #DDEBC9;
-    --dusty-rose:   #d4a5a5;
-    --lavender:     #c8b8d4;
-    --moonlight:    #e9ecef;
-    --trustpilot:   #00b67a;
-}
-
-/* ── RESET ── */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* ── TYPOGRAFI (PRÆCIS SOM FIGMA) ── */
-
-/* Body base */
-body {
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 16px;
-    background: var(--cream);
-    color: var(--charcoal);
-    line-height: 1.7;
-}
-
-/* Paragraphs */
-p {
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    font-style: normal;
-}
-
-/* Alle headings bruger Inter som standard */
-h1, h2, h3, h4 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    line-height: 1.2;
-}
-
-h1 { font-size: 3.8rem; }
-h2 { font-size: 2.4rem; }
-h3 { font-size: 1.8rem; }
-h4 { font-size: 1.2rem; }
-
-
-
-/* ── BASIS ELEMENTER ── */
-img {
-    max-width: 100%;
-    display: block;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
-/* ── CONTAINER ── */
-.container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
-/* ── KNAPPER (INGEN HOVER) ── */
-.btn-primary {
-    display: inline-block;
-    background: #DDEBC9;
-    color: #403B37;
-    font-size: 1rem;
-    padding: 16px 44px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-}
-
-hgroup.hero-text .btn-primary {
-    align-self: flex-start;
-}
-
-/* ── SKJULT OVERSKRIFT ── */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-}
-
-
 
 /* ============================================================
    HERO
@@ -230,6 +255,7 @@ hgroup.hero-text .btn-primary {
     display: flex;
     align-items: center;
     background: var(--warm-white);
+    /* padding-top styres af JS */
 }
 
 article.hero-inner {
@@ -265,6 +291,10 @@ hgroup.hero-text {
     max-width: 420px;
 }
 
+hgroup.hero-text .btn-primary {
+    align-self: flex-start;
+}
+
 figure.hero-img-wrap {
     display: flex;
     justify-content: center;
@@ -277,20 +307,20 @@ figure.hero-img-wrap img {
     width: 100%;
 }
 
-/* ── Responsive ── */
 @media (max-width: 1024px) {
     article.hero-inner {
         grid-template-columns: 1fr;
         text-align: center;
     }
-
     hgroup.hero-text { align-items: center; }
     .hero-sub { max-width: 100%; }
+    hgroup.hero-text .btn-primary { align-self: center; }
 }
 
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.4rem; }
 }
+
 
 /* ============================================================
    SOCIAL FEED — horisontal scroll
@@ -304,12 +334,9 @@ ul.social-feed-grid {
     gap: 16px;
     padding: 0 40px;
     margin: 0;
-    list-style: none;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-
-    /* Skjul scrollbar men behold funktionen */
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -319,13 +346,16 @@ ul.social-feed-grid::-webkit-scrollbar {
 }
 
 li.feed-item {
-    flex: 0 0 360px; /* fast bredde så de stikker ud */
+    flex: 0 0 360px;
     scroll-snap-align: start;
 }
 
 li.feed-item figure {
-    height: 800px;
-    aspect-ratio: unset;
+    position: relative;
+    height: 500px;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 16px;
 }
 
 li.feed-item figure img {
@@ -339,37 +369,24 @@ li.feed-item:hover figure img {
     transform: scale(1.05);
 }
 
-figcaption.feed-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(40, 32, 28, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease;
-    border-radius: 16px;
-}
-
-li.feed-item:hover figcaption.feed-overlay {
-    background: rgba(40, 32, 28, 0.35);
-}
-
-figcaption.feed-overlay img {
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-li.feed-item:hover figcaption.feed-overlay img {
-    opacity: 1;
-    transform: scale(1);
-}
-
-/* ── Responsive ── */
 @media (max-width: 768px) {
-    li.feed-item {
-        flex: 0 0 240px;
-    }
+    li.feed-item { flex: 0 0 240px; }
+}
+
+
+/* ============================================================
+   FEATURES
+   ============================================================ */
+.features-section {
+    padding: 100px 0;
+    background: var(--cream);
+}
+
+.features-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
 }
 
 figure.features-images {
@@ -438,8 +455,155 @@ figcaption.carousel-dots {
     transition: background 0.2s;
 }
 
-.dot--active {
-    background: white;
+.dot--active { background: white; }
+
+article.features-content h2 { margin-bottom: 36px; }
+
+.feat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.feat-list li {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.feat-icon-img {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+}
+
+.feat-list p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.feat-list strong { font-weight: 500; color: var(--charcoal); }
+
+@media (max-width: 1024px) {
+    .features-layout { grid-template-columns: 1fr; }
+}
+
+
+/* ============================================================
+   PRODUKT
+   ============================================================ */
+.product-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #e8f5d0 0%, #f0f7e6 100%);
+}
+
+.product-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+article.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-eyebrow {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+article.product-info h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+article.product-info > p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+p.product-price {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+fieldset.color-picker {
+    border: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+legend.color-label {
+    font-size: 0.95rem;
+    font-family: 'Poppins', sans-serif;
+    color: #666;
+    float: none;
+    width: auto;
+    margin-bottom: 0;
+}
+
+menu.color-options {
+    display: flex;
+    gap: 12px;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+.color-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.color-btn:hover { transform: scale(1.12); }
+
+.color-btn--active {
+    border-color: var(--charcoal);
+    box-shadow: 0 0 0 3px rgba(64,59,59,0.12);
+}
+
+.color-btn--moonlight { background: var(--moonlight); }
+.color-btn--rose      { background: var(--dusty-rose); }
+.color-btn--sage      { background: var(--sage); }
+.color-btn--lavender  { background: var(--lavender); }
+
+figure.product-img-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.product-img-main {
+    width: 100%;
+    max-width: 520px;
+    transition: opacity 0.22s ease;
+}
+
+@media (max-width: 1024px) {
+    .product-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    menu.color-options { justify-content: center; }
+    figure.product-img-wrap {
+        justify-content: center;
+        order: -1;
+    }
 }
 
 
@@ -457,7 +621,6 @@ figcaption.carousel-dots {
     gap: 60px;
 }
 
-/* Badge venstre - MED BOKS */
 .trustpilot-badge {
     background: white;
     padding: 30px 25px;
@@ -469,26 +632,17 @@ figcaption.carousel-dots {
     gap: 16px;
 }
 
-.tp-logo {
+hgroup.tp-logo {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.tp-logo-star {
-    width: 44px;
-    height: 44px;
-}
+.tp-logo-star { width: 44px; height: 44px; }
+.tp-logo-text { font-size: 1.9rem; }
+.tp-label     { font-size: 1.2rem; }
 
-.tp-logo-text {
-    font-size: 1.9rem;
-}
-
-.tp-label {
-    font-size: 1.2rem;
-}
-
-.tp-stars {
+p.tp-stars {
     display: flex;
     gap: 4px;
 }
@@ -498,22 +652,16 @@ figcaption.carousel-dots {
     height: 40px;
     background: var(--trustpilot);
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
 }
 
 .tp-star--half {
     background: linear-gradient(90deg, var(--trustpilot) 50%, #ddd 50%);
 }
 
-.tp-count {
-    font-size: 1.4rem;
-}
+.tp-count   { font-size: 1.4rem; }
+.tp-reviews { font-size: 1.1rem; font-weight: 300; }
 
-.tp-reviews {
-    font-size: 1.1rem;
-    font-weight: 300;
-}
-
-/* Reviews højre - MED BOKSE */
 .reviews-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -530,7 +678,7 @@ figcaption.carousel-dots {
     gap: 10px;
 }
 
-.review-stars-sm {
+p.review-stars-sm {
     display: flex;
     gap: 3px;
 }
@@ -540,13 +688,13 @@ figcaption.carousel-dots {
     height: 18px;
     background: var(--trustpilot);
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
 }
 
 .review-card h3,
 .review-card h4 {
     font-size: 1rem;
     font-weight: 500;
-    font-family: 'Inter', sans-serif;
     margin-top: 6px;
 }
 
@@ -563,210 +711,12 @@ figcaption.carousel-dots {
     margin-top: 4px;
 }
 
-
-/* ============================================================
-   FEATURES
-   ============================================================ */
-.features-section {
-    padding: 100px 0;
-    background: var(--cream);
+@media (max-width: 1024px) {
+    .trustpilot-layout { grid-template-columns: 1fr; }
 }
 
-.features-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-}
-
-/* Billede grid */
-.features-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 260px 260px;
-    gap: 16px;
-}
-
-.feat-img {
-    border-radius: 20px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    box-shadow: 0 4px 20px rgba(64,59,59,0.08);
-}
-
-.feat-img--main {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
-
-.feat-img--sm1 {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-}
-
-.feat-img--sm2 {
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-}
-
-.carousel-dots {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    margin-top: 8px;
-    grid-column: 1 / -1;
-}
-
-.dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #ccc;
-}
-
-.dot--active {
-    background: var(--charcoal);
-}
-
-/* Features indhold */
-.features-content h2 {
-    margin-bottom: 36px;
-}
-
-.feat-list {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-}
-
-.feat-list li {
-    display: flex;
-    gap: 20px;
-}
-
-.feat-icon-img {
-    width: 46px;
-    height: 46px;
-}
-
-.feat-list strong {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    display: block;
-    margin-bottom: 4px;
-}
-
-.feat-list p {
-    font-size: 0.9rem;
-    color: #777;
-    line-height: 1.6;
-}
-
-
-/* ============================================================
-   PRODUKT
-   ============================================================ */
-.product-section {
-    padding: 100px 0;
-    background: linear-gradient(var(--cream) 0%, var(--warm-white) 100%);
-}
-
-.product-layout {
-    display: grid;
-    grid-template-columns: 500px 1fr;
-    gap: 100px;
-    align-items: start;
-}
-
-.product-info {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.product-info h2 {
-    font-size: 3rem;
-}
-
-.product-info p {
-    font-size: 1.05rem;
-    color: #555;
-    line-height: 1.8;
-}
-
-.product-price {
-    font-family: 'Inter', sans-serif;
-    font-size: 2rem;
-}
-
-.produkt-valg {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.produkt-valg label {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    color: #999;
-}
-
-.produkt-valg select {
-    border: 1.5px solid #ccc;
-    border-radius: 12px;
-    padding: 14px 18px;
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    background: white;
-    color: var(--charcoal);
-}
-
-.color-picker {
-    padding: 20px 0;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-}
-
-.color-label {
-    font-size: 1rem;
-    margin-bottom: 16px;
-}
-
-.color-options {
-    display: flex;
-    gap: 14px;
-}
-
-.color-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.color-btn--active {
-    border-color: var(--charcoal);
-}
-
-.color-btn--moonlight { background: var(--moonlight); }
-.color-btn--rose      { background: var(--dusty-rose); }
-.color-btn--sage      { background: var(--sage); }
-.color-btn--lavender  { background: var(--lavender); }
-
-/* Produkt billede */
-.product-img-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-}
-
-.product-img-main {
-    width: 100%;
-    max-width: 650px;
+@media (max-width: 768px) {
+    .reviews-grid { grid-template-columns: 1fr; }
 }
 
 
@@ -783,24 +733,21 @@ figcaption.carousel-dots {
 
 .lifestyle-full-img {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     object-fit: cover;
     z-index: 0;
 }
 
-.lifestyle-full-overlay {
+span.lifestyle-full-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background: rgba(40, 32, 28, 0.38);
+    display: block;
 }
 
-.lifestyle-full-text {
+hgroup.lifestyle-full-text {
     position: relative;
     z-index: 2;
     text-align: center;
@@ -808,15 +755,13 @@ figcaption.carousel-dots {
     padding: 0 40px;
 }
 
-.lifestyle-full-text h3 {
+hgroup.lifestyle-full-text h3 {
     font-size: 3.2rem;
     margin-bottom: 16px;
     text-shadow: 0 2px 20px rgba(0,0,0,0.2);
 }
 
-.lifestyle-full-text p {
-    font-size: 1.3rem;
-}
+hgroup.lifestyle-full-text p { font-size: 1.3rem; }
 
 
 /* ============================================================
@@ -827,7 +772,7 @@ figcaption.carousel-dots {
     background: linear-gradient(180deg, var(--sage) 0%, #b5d09a 100%);
 }
 
-.cta-inner {
+article.cta-inner {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -835,13 +780,11 @@ figcaption.carousel-dots {
     gap: 20px;
 }
 
-.cta-inner h3 {
-    font-size: 2.6rem;
-}
+article.cta-inner h3 { font-size: 2.6rem; }
 
-.cta-price {
-    font-family: 'Inter', sans-serif;
+p.cta-price {
     font-size: 2rem;
+    font-weight: 400;
 }
 
 .cta-sub {
@@ -851,25 +794,25 @@ figcaption.carousel-dots {
 
 
 /* ============================================================
-   FOOTER - 4 KOLONNER
+   FOOTER
    ============================================================ */
-.footer {
+footer.footer {
     background: var(--warm-white);
     padding: 70px 0 30px;
     border-top: 1px solid rgba(64,59,59,0.08);
 }
 
-.footer-trust {
+section.footer-trust {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.footer-trust h3 {
+section.footer-trust h3 {
     font-size: 1.1rem;
     margin-bottom: 30px;
 }
 
-.trust-icon {
+ul.trust-icon {
     display: flex;
     justify-content: center;
     gap: 50px;
@@ -883,93 +826,76 @@ figcaption.carousel-dots {
     font-size: 0.88rem;
 }
 
-.trust-icon-img {
-    width: 36px;
-    height: 36px;
+.trust-icon-img { width: 36px; height: 36px; }
+
+nav.footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 50px;
 }
 
-/* 4-KOLONNE LAYOUT FOR FOOTER */
-.footer-col {
-    display: inline-block;
-    width: 20%;
-    margin-right: 1.33%;
-    vertical-align: top;
-}
-
-.footer-col:last-child {
-    margin-right: 0;
-}
-
-.footer-col h4 {
-    font-family: 'Inter', sans-serif;
+section.footer-col h4 {
     font-size: 0.9rem;
+    font-weight: 500;
     text-transform: uppercase;
     margin-bottom: 18px;
 }
 
-.footer-col ul {
+section.footer-col ul {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.footer-col li {
-    font-size: 0.9rem;
+section.footer-col li { font-size: 0.9rem; color: #777; }
+
+section.footer-col a {
     color: #777;
+    transition: color 0.2s;
 }
 
+section.footer-col a:hover { color: var(--charcoal); }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+address.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    border-top: 1px solid rgba(64,59,59,0.08);
+    font-style: normal;
+}
+
+small.footer-copy { font-size: 0.82rem; color: #aaa; }
+
+menu.footer-social {
+    display: flex;
+    gap: 18px;
+}
+
+.social-link {
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s;
+}
+
+.social-link:hover { opacity: 0.6; }
+
 @media (max-width: 1024px) {
-    .container { padding: 0 30px; }
-    
-    .trustpilot-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .features-layout,
-    .product-layout {
-        grid-template-columns: 1fr;
-    }
-    
-    /* Footer 2 kolonner på tablet */
-    .footer-col {
-        width: 48%;
-        margin-right: 4%;
-        margin-bottom: 30px;
-    }
-    
-    .footer-col:nth-child(2n) {
-        margin-right: 0;
-    }
+    nav.footer-cols { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
     .container { padding: 0 20px; }
     header { padding: 20px; }
     .nav-links { display: none; }
-    
     h1 { font-size: 2.4rem; }
     h2 { font-size: 1.8rem; }
-    .hero h1 { font-size: 2.4rem; }
-    
-    .reviews-grid { grid-template-columns: 1fr; }
-    
-    .features-images {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-    
-    .product-img-main { max-width: 400px; }
-    
-    /* Footer 1 kolonne på mobil */
-    .footer-col {
-        display: block;
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 30px;
+    nav.footer-cols { grid-template-columns: 1fr; }
+    address.footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
     }
 }

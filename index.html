@@ -171,51 +171,53 @@
     </div>
 </section>
 
-<!-- Produkt kort -->
-     <section class="product-section" id="hoejtalere">
+<section class="product-section" id="hoejtalere">
     <div class="container">
         <div class="product-layout">
-            
-            <!-- VENSTRE: Alt tekst og knapper -->
-            <div class="product-info">
-                <h2>Skabt til at blive hørt</h2>
-                <p><span class="lumina-text">LUMINA One</span> er let, bærbar og kraftfuld. Vandafvisende design og fyldig lyd - klar til at tage med overalt.</p>
-                
-                <div class="product-price">1.499 kr</div>
-                
-                <div class="produkt-valg">
-                    <label>Valgte</label>
-                    <select>
-                        <option>Sage Green</option>
-                        <option>Dusty Rose</option>
-                        <option>Lavender Mist</option>
-                        <option>Moonlight</option>
-                    </select>
-                </div>
-                
-                <div class="color-picker">
-                    <p class="color-label">Sage Green</p>
-                    <div class="color-options">
-                        <button class="color-btn color-btn--sage color-btn--active" title="Sage Green"></button>
-                        <button class="color-btn color-btn--moonlight" title="Moonlight White"></button>
-                        <button class="color-btn color-btn--rose" title="Dusty Rose"></button>
-                        <button class="color-btn color-btn--lavender" title="Lavender Mist"></button>
-                    </div>
-                </div>
-                
+
+            <article class="product-info">
+                <p class="product-eyebrow">Fordi god lyd også kan se godt ud</p>
+                <h2>Vælg din farve</h2>
+                <p><span class="lumina-text">LUMINA One</span> er let, bærbar og kraftfuld. Vandafvisende design og fyldig lyd — klar til at tage med overalt.</p>
+
+                <p class="product-price">1.499 kr.</p>
+
+                <fieldset class="color-picker">
+                    <legend class="color-label" id="color-name-label">Sage Green</legend>
+                    <menu class="color-options">
+                        <li>
+                            <button class="color-btn color-btn--sage color-btn--active"
+                                title="Sage Green"
+                                onclick="selectColor(this, 'Sage Green', 'groen')"></button>
+                        </li>
+                        <li>
+                            <button class="color-btn color-btn--moonlight"
+                                title="Moonlight"
+                                onclick="selectColor(this, 'Moonlight White', 'hvid')"></button>
+                        </li>
+                        <li>
+                            <button class="color-btn color-btn--lavender"
+                                title="Lavender"
+                                onclick="selectColor(this, 'Lavender', 'lilla')"></button>
+                        </li>
+                        <li>
+                            <button class="color-btn color-btn--rose"
+                                title="Dusty Rose"
+                                onclick="selectColor(this, 'Dusty Rose', 'pink')"></button>
+                        </li>
+                    </menu>
+                </fieldset>
+
                 <button class="btn-primary">Læg i kurv</button>
-            </div>
-            
-            <!-- HØJRE: KUN billedet -->
+            </article>
+
             <figure class="product-img-wrap">
-                <img src="img/photos/sage-green-hoejtaler.png" alt="LUMINA One højtaler i Sage Green set forfra" class="product-img-main">
-                <div class="carousel-dots" aria-hidden="true">
-                    <span class="dot dot--active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
+                <img id="product-main-img"
+                    src="img/hoejtaler-billeder-detaljer/groen-uden-baggrund.png"
+                    alt="LUMINA One højtaler"
+                    class="product-img-main">
             </figure>
-            
+
         </div>
     </div>
 </section>
