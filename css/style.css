@@ -372,6 +372,77 @@ li.feed-item:hover figcaption.feed-overlay img {
     }
 }
 
+figure.features-images {
+    position: relative;
+    margin: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+}
+
+.feat-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 20px;
+}
+
+.feat-img.active {
+    opacity: 1;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(64,59,59,0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carousel-btn:hover {
+    transform: translateY(-50%) scale(1.08);
+    box-shadow: 0 6px 16px rgba(64,59,59,0.2);
+}
+
+.carousel-btn--prev { left: 16px; }
+.carousel-btn--next { right: 16px; }
+
+figcaption.carousel-dots {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dot--active {
+    background: white;
+}
+
+
 /* ============================================================
    TRUSTPILOT
    ============================================================ */
