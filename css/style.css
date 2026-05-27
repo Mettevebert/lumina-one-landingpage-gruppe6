@@ -122,9 +122,9 @@ menu.header-actions {
 /* ── FARVER ── */
 :root {
     --cream:        #F9F6F3;
-    --charcoal:     #403B3B;
+    --chocolate:     #403B37;
     --warm-white:   #FFF7ED;
-    --sage:         #CFE3B2;
+    --sage:         #DDEBC9;
     --dusty-rose:   #d4a5a5;
     --lavender:     #c8b8d4;
     --moonlight:    #e9ecef;
@@ -171,19 +171,7 @@ h2 { font-size: 2.4rem; }
 h3 { font-size: 1.8rem; }
 h4 { font-size: 1.2rem; }
 
-/* Kun ordet LUMINA får Julius Sans One */
-.lumina-text {
-    font-family: 'Julius Sans One', sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-}
 
-/* Brand navn i header */
-.brand {
-    font-family: 'Julius Sans One', sans-serif;
-    font-size: 1.5rem;
-    letter-spacing: 3px;
-}
 
 /* ── BASIS ELEMENTER ── */
 img {
@@ -210,8 +198,8 @@ ul {
 /* ── KNAPPER (INGEN HOVER) ── */
 .btn-primary {
     display: inline-block;
-    background: var(--charcoal);
-    color: white;
+    background: #DDEBC9;
+    color: #403B37;
     font-size: 1rem;
     padding: 16px 44px;
     border: none;
@@ -219,9 +207,8 @@ ul {
     cursor: pointer;
 }
 
-.btn-full {
-    width: 100%;
-    text-align: center;
+hgroup.hero-text .btn-primary {
+    align-self: flex-start;
 }
 
 /* ── SKJULT OVERSKRIFT ── */
@@ -234,86 +221,78 @@ ul {
 }
 
 
-/* ============================================================
-   HEADER
-   ============================================================ */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: var(--warm-white);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--cream);
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-
-.nav-links {
-    display: flex;
-    gap: 35px;
-}
-
-.nav-links li {
-    font-size: 0.9rem;
-    cursor: pointer;
-}
-
 
 /* ============================================================
    HERO
    ============================================================ */
+/* ============================================================
+   HERO
+   ============================================================ */
 .hero {
-    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-top: 68px;
+    background: var(--warm-white);
 }
 
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
+article.hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
 }
 
-.hero-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-text {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: white;
-    max-width: 800px;
-    padding: 0 40px;
+hgroup.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .hero-eyebrow {
-    font-size: 0.75rem;
-    letter-spacing: 3px;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    color: #999;
 }
 
 .hero h1 {
-    font-size: 4.5rem;
-    color: white;
-    margin-bottom: 25px;
-    text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    line-height: 1.1;
 }
 
 .hero-sub {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 420px;
+}
+
+figure.hero-img-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+figure.hero-img-wrap img {
+    max-width: 540px;
+    width: 100%;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    article.hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    hgroup.hero-text { align-items: center; }
+    .hero-sub { max-width: 100%; }
+}
+
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.4rem; }
 }
 
 
