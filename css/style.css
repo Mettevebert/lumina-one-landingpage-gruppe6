@@ -719,6 +719,75 @@ p.review-stars-sm {
     .reviews-grid { grid-template-columns: 1fr; }
 }
 
+/* ============================================================
+   DETALJER DER SPILLER
+   ============================================================ */
+.details-section {
+    padding: 100px 0;
+    background: var(--warm-white);
+}
+
+.details-layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 70px;
+    align-items: start;
+}
+
+figure.details-images {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 0;
+}
+
+.detail-img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(64,59,59,0.08);
+}
+
+article.details-content h2 {
+    margin-bottom: 20px;
+}
+
+.details-intro {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 36px;
+}
+
+dl.details-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.spec-group dt h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.spec-group dd ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.spec-group dd li {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media (max-width: 1024px) {
+    .details-layout {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* ============================================================
    LIFESTYLE FULLWIDTH
