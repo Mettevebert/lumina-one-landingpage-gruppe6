@@ -790,11 +790,83 @@ dl.details-specs {
 }
 
 /* ============================================================
+   SPOTIFY / SOCIAL CONNECT
+   ============================================================ */
+.spotify-section {
+    padding: 100px 0;
+    background: var(--cream);
+}
+
+.spotify-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+article.spotify-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+article.spotify-text h2 { font-size: 2.4rem; }
+
+article.spotify-text p {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 2;
+}
+
+.spotify-btn-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-spotify {
+    display: inline-flex;
+    align-items: center;
+    background: #1DB954;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: 50px;
+    cursor: pointer;
+    width: fit-content;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-spotify:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(29,185,84,0.3);
+}
+
+figure.spotify-visual {
+    position: relative;
+    margin: 0;
+}
+
+.spotify-img {
+    width: 100%; /* lidt mindre end før */
+    margin-left: auto;
+    border-radius: 24px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .spotify-layout { grid-template-columns: 1fr; }
+    .spotify-img { width: 100%; margin: 0; }
+}
+
+/* ============================================================
    LIFESTYLE FULLWIDTH
    ============================================================ */
 .lifestyle-full {
     position: relative;
-    height: 560px;
+    height: 780px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -830,8 +902,9 @@ hgroup.lifestyle-full-text h3 {
     text-shadow: 0 2px 20px rgba(0,0,0,0.2);
 }
 
-hgroup.lifestyle-full-text p { font-size: 1.3rem; }
-
+hgroup.lifestyle-full-text p {
+    font-size: 1.3rem;
+}
 
 /* ============================================================
    CTA
@@ -856,11 +929,10 @@ p.cta-price {
     font-weight: 400;
 }
 
-.cta-sub {
+p.cta-sub {
     font-size: 0.95rem;
     color: rgba(64,59,59,0.7);
 }
-
 
 /* ============================================================
    FOOTER
