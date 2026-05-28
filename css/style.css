@@ -1095,3 +1095,12 @@ menu.footer-social {
         text-align: center;
     }
 }
+
+/* Skjulte overskrifter til mine sections, som ikke skal have en synlig overskrift */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
