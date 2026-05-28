@@ -935,6 +935,66 @@ p.cta-sub {
 }
 
 /* ============================================================
+   TRUSTPILOT
+   ============================================================ */
+.trustpilot-section {
+    padding: 90px 0;
+    background: var(--warm-white);
+}
+
+.trustpilot-section .container {
+    display: flex;
+    justify-content: center;
+}
+
+.trustpilot-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+hgroup.tp-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tp-logo-star { width: 44px; height: 44px; }
+.tp-logo-text { font-size: 1.9rem; }
+.tp-label     { font-size: 1.2rem; font-weight: 500; }
+
+p.tp-stars {
+    display: flex;
+    gap: 6px;
+}
+
+.tp-star {
+    width: 44px;
+    height: 44px;
+    background: var(--trustpilot);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
+}
+
+.tp-star--half {
+    background: linear-gradient(90deg, var(--trustpilot) 50%, #ddd 50%);
+}
+
+.tp-count {
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+.tp-reviews {
+    font-size: 1rem;
+    text-decoration: underline;
+    color: var(--charcoal);
+}
+
+
+/* ============================================================
    FOOTER
    ============================================================ */
 footer.footer {
@@ -1028,11 +1088,6 @@ menu.footer-social {
 }
 
 @media (max-width: 768px) {
-    .container { padding: 0 20px; }
-    header { padding: 20px; }
-    .nav-links { display: none; }
-    h1 { font-size: 2.4rem; }
-    h2 { font-size: 1.8rem; }
     nav.footer-cols { grid-template-columns: 1fr; }
     address.footer-bottom {
         flex-direction: column;
