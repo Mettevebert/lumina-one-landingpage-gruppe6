@@ -7,12 +7,13 @@
     --cream:        #F9F6F3;
     --charcoal:     #403B37;
     --warm-white:   #FFF7ED;
-    --sage:         #DDEBC9;
-    --dusty-rose:   #d4a5a5;
-    --lavender:     #c8b8d4;
-    --moonlight:    #e9ecef;
+    --sage:         #B0AF9B;
+    --dusty-rose:   #FCA5CB;
+    --lavender:     #cebdd6;
+    --moonlight:    #F9F6F3;
     --trustpilot:   #00b67a;
 }
+
 
 /* ── RESET ── */
 * {
@@ -80,7 +81,7 @@ ul, menu {
 /* ── KNAPPER ── */
 .btn-primary {
     display: inline-block;
-    background: var(--sage);
+    background: #FCA5CB;
     color: var(--charcoal);
     font-size: 1rem;
     font-family: 'Poppins', sans-serif;
@@ -104,7 +105,7 @@ ul, menu {
 
 /* Læg i kurv — lyserød override */
 article.product-info .btn-primary {
-    background: #FEDFDF;
+    background: #FCA5CB;
     border-color: #FEDFDF;
     color: var(--charcoal);
 }
@@ -359,7 +360,7 @@ li.feed-item figure {
 }
 
 li.feed-item figure img {
-    width: 60%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
@@ -576,10 +577,10 @@ menu.color-options {
     box-shadow: 0 0 0 3px rgba(64,59,59,0.12);
 }
 
-.color-btn--moonlight { background: var(--moonlight); }
-.color-btn--rose      { background: var(--dusty-rose); }
-.color-btn--sage      { background: var(--sage); }
-.color-btn--lavender  { background: var(--lavender); }
+.color-btn--moonlight { background: #F9F6F3; }
+.color-btn--rose      { background: #FCA5CB; }
+.color-btn--sage      { background: #B0AF9B; }
+.color-btn--lavender  { background: #CEBDD6; }
 
 figure.product-img-wrap {
     display: flex;
@@ -604,119 +605,6 @@ figure.product-img-wrap {
         justify-content: center;
         order: -1;
     }
-}
-
-
-/* ============================================================
-   TRUSTPILOT
-   ============================================================ */
-.trustpilot-section {
-    padding: 90px 0;
-    background: var(--warm-white);
-}
-
-.trustpilot-layout {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 60px;
-}
-
-.trustpilot-badge {
-    background: white;
-    padding: 30px 25px;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(64,59,59,0.08);
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    gap: 16px;
-}
-
-hgroup.tp-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.tp-logo-star { width: 44px; height: 44px; }
-.tp-logo-text { font-size: 1.9rem; }
-.tp-label     { font-size: 1.2rem; }
-
-p.tp-stars {
-    display: flex;
-    gap: 4px;
-}
-
-.tp-star {
-    width: 40px;
-    height: 40px;
-    background: var(--trustpilot);
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    display: inline-block;
-}
-
-.tp-star--half {
-    background: linear-gradient(90deg, var(--trustpilot) 50%, #ddd 50%);
-}
-
-.tp-count   { font-size: 1.4rem; }
-.tp-reviews { font-size: 1.1rem; font-weight: 300; }
-
-.reviews-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-
-.review-card {
-    background: white;
-    padding: 28px;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(64,59,59,0.08);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-p.review-stars-sm {
-    display: flex;
-    gap: 3px;
-}
-
-.sm-star {
-    width: 18px;
-    height: 18px;
-    background: var(--trustpilot);
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    display: inline-block;
-}
-
-.review-card h3,
-.review-card h4 {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-top: 6px;
-}
-
-.review-card p {
-    font-size: 0.88rem;
-    color: #666;
-    line-height: 1.65;
-    flex: 1;
-}
-
-.reviewer {
-    font-size: 0.82rem;
-    color: #aaa;
-    margin-top: 4px;
-}
-
-@media (max-width: 1024px) {
-    .trustpilot-layout { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 768px) {
-    .reviews-grid { grid-template-columns: 1fr; }
 }
 
 /* ============================================================
